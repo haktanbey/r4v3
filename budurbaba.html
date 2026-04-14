@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R4V3 // DROP & TURF</title>
+    
+    <!-- FAVICON EKLEDİK -->
+    <link rel="icon" href="standard.gif" type="image/x-icon">
+    <link rel="shortcut icon" href="standard.gif" type="image/x-icon">
+    <link rel="apple-touch-icon" href="standard.gif">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'VT323', monospace;
+            color: #ffdddd;
+            overflow-x: hidden;
+        }
+       
+        .background-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.75;
+        }
+       
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 0, 5, 0.68);
+            z-index: -1;
+        }
+       
+        .neon-red {
+            text-shadow: 0 0 15px #ff0022, 0 0 30px #ff0022, 0 0 50px #990000;
+        }
+       
+        .card {
+            background: rgba(25, 0, 8, 0.92);
+            border: 2px solid #ff0022;
+            box-shadow: 0 0 30px rgba(255, 0, 34, 0.6);
+        }
+        
+        .scanline {
+            position: relative;
+        }
+        .scanline::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 50%, rgba(255, 0, 34, 0.12) 50%);
+            background-size: 100% 6px;
+            animation: scan 10s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+        @keyframes scan { 
+            0% { background-position: 0 0; } 
+            100% { background-position: 0 300%; } 
+        }
+    </style>
+</head>
+<body class="min-h-screen relative">
+
+    <!-- ARKA PLAN GIF -->
+    <img src="standard.gif" 
+         alt="R4V3 Background"
+         class="background-gif">
+
+    <!-- Karanlık overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="border-b-2 border-red-700 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-5xl neon-red tracking-wider">R4V3</span>
+            </div>
+            <a href="https://discord.gg/r4ve" target="_blank"
+               class="bg-[#5865F2] hover:bg-[#4752c4] px-8 py-3 text-white font-bold flex items-center gap-3 border-2 border-white">
+                <i class="fab fa-discord text-3xl"></i>
+                <span>DISCORD SUNUCUSU</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="scanline min-h-screen flex items-center justify-center relative z-10">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <div class="inline-block border border-red-600 px-10 py-3 text-red-400 tracking-[4px] mb-10">
+                R4V3 TEAM // 2026
+            </div>
+           
+            <h1 class="text-8xl md:text-[130px] font-black neon-red tracking-[-6px] mb-8">R4V3</h1>
+           
+            <div class="text-4xl md:text-5xl leading-tight text-white/95 mb-12">
+                Bu topraklar bizim.<br>
+                Bu gökyüzü bizim.
+            </div>
+           
+            <p class="text-red-500 text-3xl max-w-2xl mx-auto">
+                Giren rakip klanlar bir daha çıkamıyor.
+            </p>
+           
+            <div class="mt-20 flex flex-col sm:flex-row gap-8 justify-center">
+                <a href="#uyeler"
+                   class="border-4 border-red-600 hover:bg-red-700 hover:border-red-700 text-2xl font-bold px-16 py-7">
+                    ÜYELERİ İNCELE
+                </a>
+                <a href="https://discord.gg/r4ve" target="_blank"
+                   class="bg-[#5865F2] hover:bg-[#4752c4] text-2xl font-bold px-16 py-7 flex items-center justify-center gap-4">
+                    <i class="fab fa-discord text-4xl"></i>
+                    DISCORD SUNUCUSU
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Üyeler -->
+    <section id="uyeler" class="py-24 px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+            <span class="text-red-400 text-xl tracking-widest">KLAN KADROSU</span>
+            <h2 class="text-6xl font-black neon-red mt-4">En Sağlam Oyuncular</h2>
+        </div>
+       
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Yaramaz</h3>
+                <p class="text-red-400">Drop Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Bihter</h3>
+                <p class="text-red-400">Turf Kralı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Abbas</h3>
+                <p class="text-red-400">Turf Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">T3ch</h3>
+                <p class="text-red-400">Turf Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Katreos</h3>
+                <p class="text-red-400">Drop Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">KaliBabaPiro</h3>
+                <p class="text-red-400">Turf Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Javeyska</h3>
+                <p class="text-red-400">Turf Tanrısı</p>
+            </div>
+            <div class="card p-10 text-center rounded-2xl">
+                <div class="text-6xl mb-6">👑</div>
+                <h3 class="text-4xl font-bold">Bugsbunny</h3>
+                <p class="text-red-400">Turf Kralı</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sol Alt Sabit Discord -->
+    <a href="https://discord.gg/r4ve" target="_blank"
+       class="fixed bottom-8 left-8 bg-[#5865F2] hover:bg-[#4752c4] text-white px-8 py-5 flex items-center gap-4 shadow-2xl border-2 border-red-600 z-50">
+        <i class="fab fa-discord text-4xl"></i>
+        <div>
+            <div class="font-bold text-lg">DISCORD SUNUCUSU</div>
+            <div class="text-xs opacity-90">discord.gg/r4ve</div>
+        </div>
+    </a>
+
+    <footer class="py-12 text-center text-red-600/70 text-sm border-t border-red-900 relative z-10">
+        © 2020-2026 R4V3 KLANI • R4V3 BURADA.
+    </footer>
+
+    <script>
+        console.log("%c✅ Favicon eklendi! Arka plan GIF linkini ve favicon linkini kendi dosyalarınla değiştir.", "color:#ff0022; font-size:15px");
+    </script>
+</body>
+</html>
